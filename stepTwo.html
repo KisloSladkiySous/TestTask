@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"  href="jquery.datetimepicker.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.js"></script>
+    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <link rel="stylesheet" href="stepTwo.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    </div>
+    <div data-close class="wrapper">
+      <div class="progress-bar">
+        <img src="images/Progress_bar_next.svg" alt="" />
+      </div>
+      <div class="title">
+        <h1>Личные данные</h1>
+        <p>Заполните данные вашего профиля.Это займет всего пару минут.</p>
+      </div>
+      <form id="next" action="stepThree.html" >
+        <div class="registration-form-container">
+          <div class="contact-form">
+            <div class="contacts-title">
+              <h2>Контакты</h2>
+              <p>Контакты нужны для связи с вами.</p>
+            </div>
+            <div class="email-field">
+                <label for="email">Email</label><br />
+              <input
+                id="email"
+                class="email-input"
+                required
+                type="email"
+                placeholder="example@mail.ru"
+              />
+            </div>
+            <div class="phone-number-field">
+            <label for="phone">Контактный телефон</label><br />
+              <input
+                id="phone"
+                class="email-input"
+                required
+                type="phone"
+                placeholder="89852837142"
+              />
+            </div>
+          </div>
+          <form id="address" type="submit">
+          <div class="address-form">
+            <div class="address-tilte">
+              <h2>Адрес</h2>
+              <p>Адрес нужен для поиска проишествий рядом с вам.</p>
+            </div>
+            <div class="address-field">
+              <input type="text" class="address-input" id="address" />
+              <button type="submit" onclick="showModal();"form="address" data-modal class="modal-button">  Карта</button>
+            </div>
+          </div>
+        </form>
+          <div class="date-form">
+            <div class="date-tilte">
+              <h2>Дата и время</h2>
+              <p>Адрес нужен для поиска проишествий рядом с вам.</p>
+            </div>
+            <div class="date-feld">
+              <input class="date-and-time-picker" placeholder="Календарь" id="DTP"></input>
+            </div>
+          </div>
+        </div>
+        <div class="form-button">
+          <button form="next" class="button">Продолжить</button>
+        </div>
+      </form>
+      <div class="mapmodal" id="myModal">
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.datetimepicker.full.min.js"></script>
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHz2q-7PTKSpViFmMO9B7igiItqDxXZcQ&callback=initMap&v=weekly"
+    async
+  ></script>
+    <script>
+      $('#DTP').datetimepicker({
+      });
+      </script>
+  </body>
+</html>

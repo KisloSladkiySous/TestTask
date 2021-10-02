@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>TestTask</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="progress-bar">
+          <img src="images/Progress bar.svg" alt="" />
+        </div>
+        <h1 class="title">Регистрация</h1>
+        <p class="plaintext">
+          Заполните данные вашего профиля.Это займет всего пару минут.
+        </p>
+        <form action="stepTwo.html" method="GET" class="myForm">
+          <div class="register-form-container">
+            <div class="registration-info">
+              <h2 class="user-information-title">Личные данные</h2>
+              <p class="information">Введите данные как в вашем паспорте.</p>
+            </div>
+            <div class="form-control">
+              <label for="fnameinput">Имя</label><br />
+              <input
+                required
+                type="text"
+                id="fnameinput"
+                placeholder="Введите имя"
+                pattern="[А-Яа-я-/s]{1,32}"
+                oninvalid="this.setCustomValidity('Имя должно содержать только буквы.')"
+              />
+            </div>
+            <div class="form-control">
+              <label for="lnameinput">Фамилия</label><br />
+              <input
+                required
+                type="text"
+                id="lnameinput"
+                placeholder="Введите фамилию"
+                pattern="[А-Яа-я-/s]{1,32}"
+                oninvalid="this.setCustomValidity('Фамилия должна содержать только буквы.')"
+              />
+            </div>
+          </div>
+          <div class="form-button">
+            <button onclick="saveFullName();">продолжить</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="saveData.js"></script>
+  </body>
+</html>

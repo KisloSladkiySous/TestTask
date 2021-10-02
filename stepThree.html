@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="stepThree.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="progress-bar">
+        <img src="images/Progress bar_third.svg" alt="" />
+      </div>
+      <div class="title">
+        <h1>Обработка данных</h1>
+        <p>
+          Нам необходимо получить от Вас согласие на обработку Ваших данных.
+        </p>
+      </div>
+      <form>
+        <div class="registration-form-container">
+          <div class="registration-title">
+            <h2>Согласие на обработку персональных данных</h2>
+            <p>Необходимы для корректной работы приложения</p>
+          </div>
+          <div class="checkbox-field">
+            <div class="data-checkbox">
+              <input type="checkbox" id="datacheckbox" required="required" />
+              <label for="datacheckbox">
+                Даю согласие на обработку персональных данных
+              </label>
+            </div>
+            <div class="alert-checkbox">
+              <input type="checkbox" id="alertchecbox" />
+              <label for="alertchecbox">
+                Оповещать, если по данному адресу найдены происшествия
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-button">
+          <button class="confirm" onclick="showData();">Сохранить</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="saveData.js"></script>
+  </body>
+</html>
