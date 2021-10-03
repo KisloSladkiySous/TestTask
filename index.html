@@ -24,7 +24,7 @@
         <p class="plaintext">
           Заполните данные вашего профиля.Это займет всего пару минут.
         </p>
-        <form action="stepTwo.html" method="GET" class="myForm">
+        <form action="stepTwo.html" class="myForm">
           <div class="register-form-container">
             <div class="registration-info">
               <h2 class="user-information-title">Личные данные</h2>
@@ -54,12 +54,13 @@
             </div>
           </div>
           <div class="form-button">
-            <button onclick="saveFullName();">продолжить</button>
+            <button type="submit" onclick="saveName();">продолжить</button>
           </div>
         </form>
       </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="script.js"></script>
-    <script src="saveData.js"></script>
+    <script src="saveName.js"></script>
   </body>
 </html>
